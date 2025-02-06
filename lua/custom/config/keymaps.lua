@@ -11,6 +11,10 @@ local keymap = vim.keymap -- for conciseness
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set('i', 'jj', '<Esc>')
 
+-- Select All
+vim.keymap.set('n', '<C-a>', 'gg<S-v>G', { desc = 'Select All' })
+vim.keymap.set('n', '<C-t>', '<leader>sf', { desc = 'Search for file' })
+
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
@@ -37,7 +41,7 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 -- use jk to exit insert mode
-keymap.set('i', 'jj', '<ESC>', { desc = 'Exit insert mode with jk' })
+keymap.set('i', 'jj', '<ESC>', { desc = 'Exit insert mode with jj' })
 
 -- clear search highlights
 keymap.set('n', '<leader>nh', ':nohl<CR>', { desc = 'Clear search highlights' })
