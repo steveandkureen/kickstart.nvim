@@ -16,7 +16,10 @@ return {
       end)
 
       vim.keymap.set('n', '<F5>', dap.continue)
-      vim.keymap.set('n', '<S-F5>', dap.terminate)
+      vim.keymap.set('n', '<F6>', function()
+        dap.terminate()
+        ui.close()
+      end)
       vim.keymap.set('n', '<F11>', dap.step_into)
       vim.keymap.set('n', '<F10>', dap.step_over)
       vim.keymap.set('n', '<S-F11>', dap.step_out)
